@@ -67,4 +67,43 @@ Date of finished: 26.02.2024
 ![изображение](https://github.com/fiji6479/2023_2024-ip-telephony-k34212-Gomzyakov-Alexander/assets/71012423/d939b519-2666-4095-ac4e-4a195017158c)
 
 ### 2 Часть ###
+Первым делом соберем топологию сети по примеру:
 
+![изображение](https://github.com/fiji6479/2023_2024-ip-telephony-k34212-Gomzyakov-Alexander/assets/71012423/b8e06636-b5c8-4409-a5d8-f582cd6450f0)
+
+Далее создадим VLAN порты на коммутаторе для взаимодействия коммутатора с маршрутизатором и подключить IP телефоны.
+
+![изображение](https://github.com/fiji6479/2023_2024-ip-telephony-k34212-Gomzyakov-Alexander/assets/71012423/66723460-d6ff-4d21-b3b2-09f263df3b06)
+
+Зададим маршрут по умолчанию командой ip default-gateway
+
+![изображение](https://github.com/fiji6479/2023_2024-ip-telephony-k34212-Gomzyakov-Alexander/assets/71012423/72ac707b-09eb-4ef0-8a9f-d0c2cdf43bd4)
+
+Теперь настроим VLan и порт как канал типа Trunk.
+
+![изображение](https://github.com/fiji6479/2023_2024-ip-telephony-k34212-Gomzyakov-Alexander/assets/71012423/2f5da454-4317-4768-840e-07f2cd03fc64)
+
+![изображение](https://github.com/fiji6479/2023_2024-ip-telephony-k34212-Gomzyakov-Alexander/assets/71012423/938916e1-6aea-4007-a6c3-c429d1289f25)
+
+Создадим подинерфейсы для vlan 10, vlan 20, vlan 99 
+![изображение](https://github.com/fiji6479/2023_2024-ip-telephony-k34212-Gomzyakov-Alexander/assets/71012423/e995376b-0049-4504-abbf-ea66d2cc6824)
+
+Настроим dhcp-сервер
+
+![изображение](https://github.com/fiji6479/2023_2024-ip-telephony-k34212-Gomzyakov-Alexander/assets/71012423/5afdebef-6f25-4448-8831-c09952247c89)
+
+После этого активируем dhcp  на каждом компьютере:
+
+![изображение](https://github.com/fiji6479/2023_2024-ip-telephony-k34212-Gomzyakov-Alexander/assets/71012423/776a7848-e85a-4019-835e-890630c5e38c)
+
+Теперь проверим работоспособность нашей системы с помощью пингов и созвонов:
+![изображение](https://github.com/fiji6479/2023_2024-ip-telephony-k34212-Gomzyakov-Alexander/assets/71012423/93f538ae-a641-4469-94ff-b8ac2ff6a480)
+
+![изображение](https://github.com/fiji6479/2023_2024-ip-telephony-k34212-Gomzyakov-Alexander/assets/71012423/7e1362c3-16f4-4868-b879-422996225efa)
+
+![изображение](https://github.com/fiji6479/2023_2024-ip-telephony-k34212-Gomzyakov-Alexander/assets/71012423/4cd4d694-38f1-4a58-a95d-8726037acb9a)
+
+
+
+## Вывод ##
+В ходе лабораторной работы были построены схемы сети IP-телефонии, настроены устройства и поднять dhcp-сервер, в результате чего мы успешно соединили как телефоны так и пк.
